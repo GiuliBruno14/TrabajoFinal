@@ -1,0 +1,154 @@
+body {
+    background-color: #FFDAB1;
+    font-family: 'Lucida Handwriting', cursive;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.logo {
+    position: fixed;
+    /*Dejarla fija*/
+    width: 100%;
+    height: 75px;
+    background-color: #BFAD98;
+    z-index: 9999;
+    text-align: center;
+}
+
+.caja {
+    margin: 3%;
+    margin-top: 0%;
+    position: absolute;
+    top: 85px;
+    width: 94%;
+    height: 500px;
+}
+
+.contenido {
+    float: left;
+    margin-top: 5px;
+    margin-right: 5px;
+    border: #BFAD98;
+    border-style: outset;
+    width: 25%;
+    height: 25%;
+    padding: 10px;
+    text-align: center;
+}
+
+.icono {
+    float: right;
+    width: 40px;
+
+}
+
+.contenido li {
+    font-size: 14px;
+    text-align: left;
+}
+
+.contenido ul {
+    list-style-type: none;
+}
+
+.decoracion {
+    float: right;
+    width: 70px;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+p {
+    text-align: justify;
+}
+
+h2 {
+    background-color: #BFAD98;
+    text-align: center;
+}
+
+h3 {
+    border: #BFAD98;
+    border-style: outset;
+    padding: 2px;
+}
+
+img {
+    float: left;
+    margin-right: 15px;
+
+}
+
+b {
+    color: #8F8B86;
+}
+
+.lpersonalizada {
+    list-style-image: url('img/viñeta.png');
+    list-style-position: inside;
+    margin-left: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.lpersonalizada ul {
+    list-style-type: circle;
+    /*consultar: NO FUNCIONA */
+}
+
+.alimentos1 ol li {
+    background-color: #DFC3A5;
+    text-align: center;
+}
+
+.alimentos1 {
+    float: left;
+    width: 47%;
+}
+
+.alimentos1 h3 {
+    text-align: center;
+}
+
+.alimentos2 {
+    float: right;
+    width: 47%;
+}
+
+.alimentos2 h3 {
+    text-align: center;
+}
+
+.alimentos2 h4 {
+    background-color: #DFC3A5;
+    text-align: center;
+}
+
+.lactancia {
+    float: left;
+    width: 100%;
+}
+
+.final {
+    background-color: #BFAD98;
+    width: 100%;
+    height: 50px;
+    float: left;
+    margin-top: 10px;
+}
+
+.derecha {
+    float: right;
+    margin-left: 15px;
+    width: 100px;
+    height: 100px;
+}
+
+.izquierda {
+    float: left;
+    margin-right: 30px;
+    width: 150px;
+    height: 100px;
+}
