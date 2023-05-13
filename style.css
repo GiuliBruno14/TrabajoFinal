@@ -1,6 +1,6 @@
 body {
     background-color: #FFDAB1;
-    font-family: 'Lucida Handwriting', cursive;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 20px;
     text-align: justify;
 }
@@ -137,6 +137,8 @@ a {
     height: 50px;
     float: left;
     margin-top: 10px;
+    padding: 15px;
+    font-size: 14px;
 }
 
 .derecha {
@@ -151,4 +153,19 @@ a {
     margin-right: 30px;
     width: 150px;
     height: 120px;
+}
+
+.final.flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.final.flex-container > div {
+    width: 100px;
+    margin: 10px;
+}
+
+.redes {
+    width: 20px;
+    height: 20px;
 }
