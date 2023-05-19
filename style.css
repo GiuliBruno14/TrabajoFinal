@@ -205,3 +205,10 @@ td {
     width: 500px;
     height: 400px;
 }
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

@@ -14,7 +14,23 @@
         <h1>Contacto</h1>
     </div>
     <div class="caja">
+        <form action="" method="get" name="contacto" onsubmit="return validar()">
+            <div class="formulario">
+                <div>
+                    <label for="nombre">Nombre: </label>
+                    <input type="text" name="nombre" maxlength="30" required id="nombre" />
+                </div>
+                <div>
+                    <label for="email">Email: </label>
+                    <input type="text" name="email" maxlength="30" required id="email" />
+                </div>
+                <div>
+                    <input type="submit" value="Enviar">
+                </div>
 
+                <label></label>
+            </div>
+        </form>
         <div class="final">
             Redes Sociales
             <div class="flex-container">
@@ -26,6 +42,11 @@
             </div>
         </div>
     </div>
+    <script>
+        function validar(){
+            
+        }
+    </script>
 </body>
 
 </html>
