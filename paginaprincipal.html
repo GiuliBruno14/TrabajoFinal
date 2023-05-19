@@ -17,53 +17,66 @@
             Nuestro objetivo es proporcionar a los dueños de mascotas consejos útiles,
             recursos y orientación para garantizar que sus compañeros animales reciban el mejor cuidado posible.
         </p>
-        <div class="contenido">
-            <img class="icono" src="img/adiestramiento.png" alt="icono adiestramiento">
-            <a href="adiestramiento.html">Adiestramiento</a>
-            <ul>
-                <li><a href="adiestramiento.html#problem">Problemas del comportamiento</a></li>
-                <li><a href="adiestramiento.html#educ">Educación básica</a></li>
-                <li><a href="adiestramiento.html#juegos">Juegos y diversión</a></li>
-            </ul>
+        <div class="menu">
+            <div class="contenido">
+                <img class="icono" src="img/adiestramiento.png" alt="icono adiestramiento">
+                <a href="adiestramiento.html">Adiestramiento</a>
+                <ul>
+                    <li><a href="adiestramiento.html#problem">Problemas del comportamiento</a></li>
+                    <li><a href="adiestramiento.html#educ">Educación básica</a></li>
+                    <li><a href="adiestramiento.html#juegos">Juegos y diversión</a></li>
+                </ul>
 
+            </div>
+            <div class="contenido">
+                <img class="icono" src="img/alimentacion.png" alt="icono alimentacion">
+                <a href="alimentacion.html">Alimentación</a>
+                <ul>
+                    <li><a href="alimentacion.html#dietas">Dietas equilibradas</a></li>
+                    <li><a href="alimentacion.html#natural">Alimento natural</a></li>
+                    <li><a href="alimentacion.html#lactancia">Lactancia</a></li>
+                </ul>
+            </div>
+            <div class="contenido">
+                <img class="icono" src="img/cuidados.png" alt="icono cuidados">
+                <a href="cuidados.html">Cuidados</a>
+                <ul>
+                    <li><a href="cuidados.html#basicos">Ciudados básicos</a></li>
+                    <li><a href="cuidados.html#extra">Ciudados extra</a></li>
+                </ul>
+            </div>
+            <div class="contenido">
+                <img class="icono" src="img/curiosidades.png" alt="icono curiosidades">
+                <a href="curiosidades.html">Curiosidades</a>
+                <ul>
+                    <li><a href="curiosidades.html#curiosperros">Curiosidades de los perros</a></li>
+                </ul>
+            </div>
+            <div class="contenido">
+                <img class="icono" src="img/adopcion.png" alt="icono adopcion">
+                Antes de adoptar
+                <ul>
+                    <li>Que necesitas saber</li>
+                    <li>Nombres</li>
+                </ul>
+            </div>
+            <div class="contenido">
+                <img class="icono" src="img/curiosidades.png" alt="icono curiosidades">
+                <a href="contacto.html">Contactanos</a>
+            </div>
         </div>
-        <div class="contenido">
-            <img class="icono" src="img/alimentacion.png" alt="icono alimentacion">
-            <a href="alimentacion.html">Alimentación</a>
-            <ul>
-                <li><a href="alimentacion.html#dietas">Dietas equilibradas</a></li>
-                <li><a href="alimentacion.html#natural">Alimento natural</a></li>
-                <li><a href="alimentacion.html#lactancia">Lactancia</a></li>
-            </ul>
-        </div>
-        <div class="contenido">
-            <img class="icono" src="img/cuidados.png" alt="icono cuidados">
-            <a href="cuidados.html">Cuidados</a>
-            <ul>
-                <li><a href="cuidados.html#basicos">Ciudados básicos</a></li>
-                <li><a href="cuidados.html#extra">Ciudados extra</a></li>
-            </ul>
-        </div>
-        <div class="contenido">
-            <img class="icono" src="img/salud.png" alt="icono salud">
-            <a href="salud.html">Salud</a>
-            <ul>
-                <li><a href="salud.html#problemassalud">Otros problemas de salud</a></li>
-                <li>Prevencion</li>
-                <li>Enfermedades parasitarias</li>
-            </ul>
-        </div>
-        <div class="contenido">
-            <img class="icono" src="img/adopcion.png" alt="icono adopcion">
-            Antes de adoptar
-            <ul>
-                <li>Que necesitas saber</li>
-                <li>Nombres</li>
-            </ul>
-        </div>
-        <div class="contenido">
-            <img class="icono" src="img/curiosidades.png" alt="icono curiosidades">
-            Curiosidades
+        <div class="mascotas">
+            <h3>Mis mascotas</h3>
+            <div id="carrousel">
+                <img src="imgMascotas/Brisa.jpeg">
+                <img src="imgMascotas/Apolo.jpeg">
+                <img src="imgMascotas/Alma.jpeg">
+                <img src="imgMascotas/Chiara.jpeg">
+                <img src="imgMascotas/Chiquita.jpeg">
+            </div>
+            <BR>
+            <button onclick="ant()">Anterior</button>
+            <button onclick="sig()">Siguiente</button>
         </div>
         <div class="final">
             Redes Sociales
@@ -76,6 +89,40 @@
             </div>
         </div>
     </div>
+
+    <script>
+        let c = document.getElementById("carrousel");
+        let imgs = document.querySelectorAll("#carrousel img");
+        let i = 0;
+        let interval = 1000;
+        c.innerHTML = "";
+        c.appendChild(imgs[0]);
+
+        setInterval(function () {
+            sig();
+        }, 3000);
+
+        function sig() {
+            c.innerHTML = "";
+            i++;
+            if (i == imgs.length - 1) {
+                c.appendChild(imgs[0]);
+                i = 0;
+            } else {
+                c.appendChild(imgs[i]);
+            }
+        }
+        function ant() {
+            c.innerHTML = "";
+            i--;
+            if (i == -1) {
+                c.appendChild(imgs[imgs.length - 1]);
+                i = (imgs.length - 1);
+            } else {
+                c.appendChild(imgs[i]);
+            }
+        }
+    </script>
 
 </body>
 
