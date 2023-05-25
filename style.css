@@ -212,3 +212,12 @@ td {
     justify-content: center;
     align-items: center;
 }
+
+.formulario div {
+    margin-top: 1%;
+}
+
+.error{
+    display:none;
+    color:red;
+}
