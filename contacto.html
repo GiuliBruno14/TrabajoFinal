@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css">
     <title>Contacto</title>
     <script>
-        let personas=[];
         function validar() {
             let nombre = document.datos.nombre;
             console.log("Nombre: ", nombre);
@@ -15,7 +14,7 @@
             console.log("Edad: ", edad.value)
             let email = document.datos.email;
             let patron = /^[A-Za-z0-9-_]+@[A-Za-z]+.[A-Za-z]+.[A-Za-z]+$/;
-
+            let mensaje = document.datos.mensaje;
             if (nombre.value.trim() === "" || nombre.value.length < 3) {
                 document.querySelector('#errorNombre').style.display = 'inline';
                 nombre.focus();
@@ -23,7 +22,7 @@
             } else {
                 document.querySelector('#errorNombre').style.display = 'none';
             }
-           
+
             if (edad.value.trim() === "" || isNaN(edad.value) || edad.value < 12 || edad.value > 120) {
                 document.querySelector('#errorEdad').style.display = 'inline';
                 edad.focus();
@@ -39,17 +38,24 @@
             } else {
                 document.querySelector('#errorEmail').style.display = 'none';
             }
+            let respuestas = document.getElementById('respuestas');
+            respuestas.innerHTML = '¡Datos ingresados correctamente!';
+            let parrafoNombre = document.createElement('p');
+            parrafoNombre.innerHTML = "Nombre: " + nombre.value;
+            respuestas.appendChild(parrafoNombre);
+            let parrafoEdad = document.createElement('p');
+            parrafoEdad.innerHTML = "Edad: " + edad.value;
+            respuestas.appendChild(parrafoEdad);
+            let parrafoEmail = document.createElement('p');
+            parrafoEmail.innerHTML = "Email: " + email.value;
+            respuestas.appendChild(parrafoEmail);
+            let parrafoMensaje = document.createElement('p');
+            parrafoMensaje.innerHTML = "Mensaje: " + mensaje.value;
+            respuestas.appendChild(parrafoMensaje);
 
-            personas.push([nombre.value, edad.value, email.value]);
-            nombre.value = "";
-            edad.value = "";
-            email.value = "";
             return false;
         }
 
-        function mostrarDatos(){
-            
-        }
     </script>
 </head>
 
@@ -59,7 +65,7 @@
         <h1>Contacto</h1>
     </div>
     <div class="caja">
-        <form action="" method="get" name="datos" onsubmit="return validar()">
+        <form action="" method="get" name="datos" onsubmit="validar()">
             <div class="formulario">
                 <div>
                     <label for="nombre">Nombre: </label>
@@ -77,8 +83,13 @@
                     <span id="errorEmail" class="error">Debe ingresar un formato de email válido</span>
                 </div>
                 <div>
+                    <textarea name="mensaje" form="datos" maxlength="200" rows="9" cols="50" onfocus="this.value=''"
+                        placeholder="Inserta un comentario(opcional)"></textarea>
+                </div>
+                <div>
                     <input type="submit" value="Enviar Datos">
                 </div>
+                <div id="respuestas"></div>
             </div>
         </form>
         <div class="final">
