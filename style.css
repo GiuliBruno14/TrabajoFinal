@@ -100,10 +100,12 @@ b {
 a {
     text-decoration: none;
 }
+.flex_alimentacion{
+    display: flex;
+}
 
-.lpersonalizada ul {
-    list-style-type: circle;
-    /*consultar: NO FUNCIONA */
+.flex_alimentacion div{
+    margin-left: 1%;
 }
 
 .alimentos1 ol li {
@@ -112,7 +114,6 @@ a {
 }
 
 .alimentos1 {
-    float: left;
     width: 47%;
 }
 
@@ -121,7 +122,6 @@ a {
 }
 
 .alimentos2 {
-    float: right;
     width: 47%;
 }
 
