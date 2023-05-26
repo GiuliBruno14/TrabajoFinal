@@ -221,3 +221,7 @@ td {
     display:none;
     color:red;
 }
+
+#respuestas {
+    font-size: 15px;
+}

@@ -14,7 +14,8 @@
             console.log("Edad: ", edad.value)
             let email = document.datos.email;
             let patron = /^[A-Za-z0-9-_]+@[A-Za-z]+.[A-Za-z]+.[A-Za-z]+$/;
-            let mensaje = document.datos.mensaje;
+            let mensaje = document.getElementById("mensaje");
+            console.log("Mensaje: ", mensaje)
             if (nombre.value.trim() === "" || nombre.value.length < 3) {
                 document.querySelector('#errorNombre').style.display = 'inline';
                 nombre.focus();
@@ -46,13 +47,17 @@
             let parrafoEdad = document.createElement('p');
             parrafoEdad.innerHTML = "Edad: " + edad.value;
             respuestas.appendChild(parrafoEdad);
+            //
             let parrafoEmail = document.createElement('p');
             parrafoEmail.innerHTML = "Email: " + email.value;
             respuestas.appendChild(parrafoEmail);
             let parrafoMensaje = document.createElement('p');
             parrafoMensaje.innerHTML = "Mensaje: " + mensaje.value;
             respuestas.appendChild(parrafoMensaje);
-
+            nombre.value="";
+            edad.value="";
+            email.value="";
+            mensaje.value="";
             return false;
         }
 
@@ -65,7 +70,7 @@
         <h1>Contacto</h1>
     </div>
     <div class="caja">
-        <form action="" method="get" name="datos" onsubmit="validar()">
+        <form name="datos" onsubmit="return validar()">
             <div class="formulario">
                 <div>
                     <label for="nombre">Nombre: </label>
@@ -83,8 +88,8 @@
                     <span id="errorEmail" class="error">Debe ingresar un formato de email válido</span>
                 </div>
                 <div>
-                    <textarea name="mensaje" form="datos" maxlength="200" rows="9" cols="50" onfocus="this.value=''"
-                        placeholder="Inserta un comentario(opcional)"></textarea>
+                    <textarea id="mensaje" name="mensaje" form="datos" maxlength="200" rows="9" cols="50" onfocus="this.value=''"
+                        placeholder="Inserta un comentario (opcional)"></textarea>
                 </div>
                 <div>
                     <input type="submit" value="Enviar Datos">
